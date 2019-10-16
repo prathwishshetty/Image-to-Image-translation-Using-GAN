@@ -36,7 +36,7 @@ To evaluate the accuracy of the predicted output, we will leverage the actual ma
 
 2. Dice score (F Score): Dice Score is similar to IoU in extreme cases, but tend is not as severe as IoU in penalizing a single instance of bad classification (IoU has a squaring effect relative to F1). The predicted score for these metrics should be closer to 1.
 
-3.Pixel Accuracy: This is the percentage of Pixels which are correctly classified. This metric is inaccurate when dealing with class imbalance which we predict we will encounter in this case.  
+3. Pixel Accuracy: This is the percentage of Pixels which are correctly classified. This metric is inaccurate when dealing with class imbalance which we predict we will encounter in this case.  
 
 Benchmark for the project will be the results of reference paper.
 
