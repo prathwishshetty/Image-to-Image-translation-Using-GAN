@@ -405,6 +405,3 @@ predicted.close
 
 im = Image.fromarray(np.uint8(cm.gist_earth(dataset_file[1][1])*255))
 
-im = Image.fromarray(np.uint8(cm.gist_earth(dataset_file[1][1])*255)[...,:3])
-
-np.shape(np.uint8(cm.gist_earth(dataset_file[1][1])*255)[...,:3])
