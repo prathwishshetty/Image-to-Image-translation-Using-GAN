@@ -320,11 +320,10 @@ image_shape = x.shape[1:]
 
 model_gen=load_model('gdrive/My Drive/DS 5500/Data/PSdata/Google_Images/Gan_Model_5/model_018800.h5')
 
-model_gen
 
 predicted=model_gen.predict(dataset[0])
 
-np.shape(predicted)
+
 
 save_path='gdrive/My Drive/DS 5500/Data/PSdata/Google_Images/Gan_Model_5/predicted/'
 plt.imshow(predicted[img])
@@ -341,7 +340,7 @@ save_path='gdrive/My Drive/DS 5500/Evaluation/New_gan_model/'
 with open(save_path+"predicted", 'wb') as file:
     pickle.dump(predicted,file)
 
-np.shape(dataset[1])
+
 
 model_gen=load_model('gdrive/My Drive/DS 5500/GAN Model_1000/model_010000.h5')
 
@@ -383,8 +382,6 @@ def read_data(path,x,y):
 
 path= 'gdrive/My Drive/DS 5500/Data/Google_Images/'
 dataset= read_data(path,'superimposed_1000','street_1000')
-
-np.shape(predicted)
 
 predicted=model_gen.predict(dataset[0])
 
