@@ -54,6 +54,7 @@ def calculate_hausdroff(component1,component2):
             
     return(np.mean(intermediate_result))
 
+
 def bfScore(component1,component2):
     intermediate_result = -1
     theta = 10
@@ -65,8 +66,9 @@ def bfScore(component1,component2):
                 for column in range (0,np.shape(component)[1]):
                     if intermediate_result > jaccard_similarity_score(component1[row][column],component2[row][column]):
                         intermediate_result = jaccard_similarity_score(component1[row][column],component2[row][column])
-                                                              
-    return(intermediate_result) 
+
+    return(intermediate_result)
+
 pred = pd.read_pickle(r'C:\Users\Inspiron\Desktop\DS5500\dataset')
 data = pd.read_pickle(r'C:\Users\Inspiron\Desktop\DS5500\predicted')
 
