@@ -61,11 +61,12 @@ def bfScore(component1,component2):
         a = np.add(component1,l)
         for l in range(0,theta+1):
             b = np.add(component2,l)
-            if intermediate_result > jaccard_similarity_score(component1[row][column],component2[row][column]):
-                intermediate_result = jaccard_similarity_score(component1[row][column],component2[row][column])
+            for row in range (0,np.shape(component)[0]):
+                for column in range (0,np.shape(component)[1]):
+                    if intermediate_result > jaccard_similarity_score(component1[row][column],component2[row][column]):
+                        intermediate_result = jaccard_similarity_score(component1[row][column],component2[row][column])
                                                               
-    return(intermediate_result)
- 
+    return(intermediate_result) 
 pred = pd.read_pickle(r'C:\Users\Inspiron\Desktop\DS5500\dataset')
 data = pd.read_pickle(r'C:\Users\Inspiron\Desktop\DS5500\predicted')
 
