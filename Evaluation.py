@@ -118,3 +118,14 @@ for target in range(0,300):
             for column in range(0,np.shape(sub_a)[1]):
               intermediate_result = intermediate_result + [jaccard_similarity_score(sub_a[row][column],sub_b[row][column])]  
     tmScore = tmScore + [np.mean(intermediate_result)]
+    
+    
+# Calculating Boundary Metric (BF1)
+for target in range(0, 300):
+    a = actual_moddata[target]
+    b = moddata[target]
+    bf_Scores = []
+    for i in range(0,np.shape(a)[0]):
+        for j in range(0,np.shape(a)[1]):
+            bf_Scores = bf_Scores + [bfScore(a,b)]
+
