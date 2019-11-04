@@ -99,4 +99,21 @@ for target in range(0,300):
     for i in range(0,256):
         for j in range(0,256):
             temp_score = temp_score + [dice(a[i][j],b[i][j])]
-    Dice_Score = Dice_Score + [np.mean(temp_score)]    
+    Dice_Score = Dice_Score + [np.mean(temp_score)]   
+    
+# Calculating Trimap
+tmScore = []
+for target in range(0,300):
+    print(target)
+    a = actual_moddata[target]
+    b = moddata[target]
+    temp_score = []
+    for i in range(3,256):
+        # for j in range(0,256):
+        sub_a = a[i-2:i+3]
+        sub_b = b[i-2:i+3]
+        intermediate_result = []
+        for row in range(0, np.shape(sub_a)[0]):
+            for column in range(0,np.shape(sub_a)[1]):
+              intermediate_result = intermediate_result + [jaccard_similarity_score(sub_a[row][column],sub_b[row][column])]  
+    tmScore = tmScore + [np.mean(intermediate_result)]
