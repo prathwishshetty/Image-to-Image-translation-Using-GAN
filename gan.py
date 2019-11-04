@@ -403,5 +403,5 @@ predicted = open(path,'rb')
 dataset_file = pickle.load(predicted)
 predicted.close
 
-im = Image.fromarray(np.uint8(cm.gist_earth(dataset_file[1][1])*255))
+
 
