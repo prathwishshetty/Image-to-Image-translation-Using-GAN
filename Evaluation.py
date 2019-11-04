@@ -66,3 +66,11 @@ def bfScore(component1,component2):
                                                               
     return(intermediate_result)
  
+pred = pd.read_pickle(r'C:\Users\Inspiron\Desktop\DS5500\dataset')
+data = pd.read_pickle(r'C:\Users\Inspiron\Desktop\DS5500\predicted')
+
+moddata = data*256
+moddata = moddata.astype(int)
+
+actual_moddata = actual*256
+actual_moddata = actual_moddata.astype(int)
