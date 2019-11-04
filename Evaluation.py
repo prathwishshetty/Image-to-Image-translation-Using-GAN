@@ -87,3 +87,16 @@ for target in range(0,300):
         for j in range(0,256):
             temp_score = temp_score + [jaccard_similarity_score(a[i][j],b[i][j])]
     IoU_Score = IoU_Score + [np.mean(temp_score)]    
+    
+    
+# Calculating Dice Scores
+Dice_Score = []
+for target in range(0,300):
+    print(target)
+    a = actual_moddata[target]
+    b = moddata[target]
+    temp_score = []
+    for i in range(0,256):
+        for j in range(0,256):
+            temp_score = temp_score + [dice(a[i][j],b[i][j])]
+    Dice_Score = Dice_Score + [np.mean(temp_score)]    
